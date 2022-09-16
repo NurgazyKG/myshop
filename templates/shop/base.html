@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}My shop{% endblock %}</title>
+    <link type="text/css" href="{% static 'css/base.css' %}" rel="stylesheet"/>
+
+</head>
+<body>
+<div id="header">
+    <a href="/" class="logo">My shop</a>
+</div>
+{% block Cart %}
+<div class="Cart">
+    <div class="cart">
+        Your cart is empty.
+    </div>
+</div>
+{% endblock %}
+
+<div class="Category">
+{% block Category %}
+{% endblock %}
+</div>
+
+{% block Products %}
+<div class="Products">
+
+</div>
+{% endblock %}
+
+<div id="subheader">
+
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
